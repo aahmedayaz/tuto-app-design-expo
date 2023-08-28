@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet } from 'react-native';
+import { View, TextInput, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 const SignUpForm = () => {
   const [name, setName] = useState('');
@@ -58,7 +58,10 @@ const SignUpForm = () => {
           onChangeText={setPassword}
         />
       </View>
-      <Button title="Sign In" color="#034BD9" onPress={handleSubmit} />
+      <TouchableOpacity style={{ borderRadius: 10, backgroundColor : '#034BD9' , display: 'flex', justifyContent: 'center', alignItems: 'center', paddingVertical: 12}} 
+      > 
+        <Text style={{color: 'white', fontSize: 16}}>Sign Up</Text>
+      </TouchableOpacity>
     </View>
   );
 };
